@@ -8,10 +8,8 @@ node {
     }
 
     stage('Build'){
-        steps {
-                withMaven(maven : 'Maven_Home') {
-                bat 'mvn install'
-            }
+        withMaven(maven : 'Maven_Home') {
+            bat 'mvn install'
         }
     }
 
