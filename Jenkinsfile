@@ -8,7 +8,7 @@ node {
     }
 
     stage('Build'){
-        withMaven(maven : 'Maven_Home') {
+        steps {
             bat 'mvn install'
         }
     }
