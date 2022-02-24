@@ -8,9 +8,7 @@ node {
     }
 
     stage('Build'){
-        steps {
-            bat 'mvn install'
-        }
+        bat 'mvn install'
     }
 
     stage('Build image') {
