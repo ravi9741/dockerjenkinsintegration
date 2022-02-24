@@ -7,6 +7,13 @@ node {
         checkout scm
     }
 
+    stage('Build'){
+        steps {
+                withMaven(maven : 'Maven_Home') {
+                bat 'mvn install'
+            }
+    }
+
     stage('Build image') {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
