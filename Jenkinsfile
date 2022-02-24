@@ -12,6 +12,7 @@ node {
                 withMaven(maven : 'Maven_Home') {
                 bat 'mvn install'
             }
+        }
     }
 
     stage('Build image') {
